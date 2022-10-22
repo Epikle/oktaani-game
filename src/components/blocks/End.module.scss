@@ -4,11 +4,10 @@
 .end {
   @include block;
   @include block-text;
+  @include fadein(250ms, 1);
 
   background-color: gold;
   color: black;
-
-  @include fadein(250ms);
 }
 
 .hidden {

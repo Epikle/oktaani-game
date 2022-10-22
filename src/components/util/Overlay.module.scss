@@ -1,14 +1,11 @@
 @import '../../index.scss';
 
 .overlay {
-  position: absolute;
-  inset: 0;
-  background-color: black;
   display: grid;
   place-items: center;
+  position: absolute;
+  inset: 0;
+  background-color: lighten($color: #000000, $amount: 8);
   cursor: default;
-  opacity: 0;
   z-index: 1;
-
-  @include fadein(250ms);
 }

@@ -1,4 +1,5 @@
 @import './blocks.scss';
+@import '../../index.scss';
 
 .start {
   @include block;
@@ -9,6 +10,8 @@
 }
 
 .is-started {
+  @include fadein(250ms, 1);
+
   background-color: greenyellow;
   color: black;
 }

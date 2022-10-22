@@ -8,7 +8,7 @@ type Props = {
 };
 
 const GameFinished: React.FC<Props> = ({ time, onReset }) => {
-  const endTime = +((Date.now() - time) / 1000).toFixed(2);
+  const endTime = ((Date.now() - time) / 1000).toFixed(2);
 
   return (
     <Overlay>
@@ -16,7 +16,7 @@ const GameFinished: React.FC<Props> = ({ time, onReset }) => {
         FINISHED
       </span>
       <button className={styles['new-game']} onClick={onReset}>
-        Start new game
+        Continue
       </button>
     </Overlay>
   );
