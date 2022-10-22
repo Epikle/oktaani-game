@@ -5,4 +5,17 @@
   display: grid;
   place-items: center;
   cursor: default;
+  opacity: 0;
+  z-index: 1;
+
+  animation: 200ms ease forwards fadein;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

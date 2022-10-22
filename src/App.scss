@@ -7,18 +7,40 @@
   h1 {
     font-weight: 400;
     align-self: flex-end;
+    position: relative;
 
     strong {
       color: gold;
     }
+
+    &::after {
+      content: 'BETA';
+      position: absolute;
+      top: -0.75rem;
+      right: 0;
+      font-size: 0.75rem;
+      font-weight: bold;
+      line-height: 0.75rem;
+      color: lighten($color: #000000, $amount: 25);
+    }
   }
 }
 
-.App {
+.app {
   align-self: flex-start;
   max-width: 50rem;
   display: grid;
   grid-template-columns: repeat(11, 1fr);
   position: relative;
   cursor: cell;
+
+  &::after {
+    content: 'map' attr(data-map);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 0.6rem;
+    line-height: 0.6rem;
+    color: lighten($color: #000000, $amount: 25);
+  }
 }
