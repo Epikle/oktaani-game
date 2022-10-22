@@ -1,7 +1,7 @@
 type Props = {
-  onOver: () => void;
+  onEnd: () => void;
 };
-const End: React.FC<Props> = ({ onOver }) => {
+const End: React.FC<Props> = ({ onEnd }) => {
   const styles: React.CSSProperties = {
     backgroundColor: 'gold',
     width: 30,
@@ -15,7 +15,7 @@ const End: React.FC<Props> = ({ onOver }) => {
   };
 
   return (
-    <div style={styles} onMouseOver={onOver}>
+    <div style={styles} onMouseOver={onEnd}>
       END
     </div>
   );

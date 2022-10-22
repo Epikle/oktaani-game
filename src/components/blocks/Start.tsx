@@ -1,8 +1,8 @@
 type Props = {
-  onLeave: () => void;
+  onStart: () => void;
 };
 
-const Start: React.FC<Props> = ({ onLeave }) => {
+const Start: React.FC<Props> = ({ onStart }) => {
   const styles: React.CSSProperties = {
     backgroundColor: 'darkgray',
     width: 30,
@@ -16,7 +16,7 @@ const Start: React.FC<Props> = ({ onLeave }) => {
   };
 
   return (
-    <div style={styles} onMouseLeave={onLeave}>
+    <div style={styles} onMouseLeave={onStart}>
       START
     </div>
   );
