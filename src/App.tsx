@@ -52,10 +52,14 @@ function App() {
 
   return (
     <Fragment>
-      <h1 data-version="ALPHA V0.15.1">
+      <h1 data-version="ALPHA V0.15.3">
         oktaani<strong>GAME</strong>
       </h1>
-      <div className="app" data-map={map}>
+      <div
+        className="app"
+        data-map={map}
+        data-instructions="Try to navigate through the maze and find an exit."
+      >
         {isHit && isStarted && <GameOver onReset={resetGame} />}
         {isStarted && isFinished && (
           <GameFinished onReset={resetGame} time={time} />

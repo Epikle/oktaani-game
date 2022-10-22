@@ -44,4 +44,16 @@
     line-height: 0.6rem;
     color: lighten($color: #000000, $amount: 25);
   }
+
+  &::before {
+    content: attr(data-instructions);
+    position: absolute;
+    bottom: -1.25rem;
+    left: 0;
+    width: 100%;
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+    text-align: center;
+    color: lighten($color: #000000, $amount: 30);
+  }
 }

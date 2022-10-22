@@ -44,7 +44,7 @@ const End: React.FC<Props> = ({ isStarted, onEnd }) => {
       onMouseOver={onEnd}
       ref={divRef}
     >
-      END
+      EXIT
     </div>
   );
 };
