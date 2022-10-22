@@ -1,11 +1,13 @@
 import { useState, ReactNode, Fragment, useEffect } from 'react';
 
-import Road from './components/Road';
-import Wall from './components/Wall';
+import Road from './components/blocks/Road';
+import Wall from './components/blocks/Wall';
+import Start from './components/blocks/Start';
+import End from './components/blocks/End';
+import GameOver from './components/GameOver';
+import GameFinished from './components/GameFinished';
 
-import './App.css';
-import Start from './components/Start';
-import End from './components/End';
+import './App.scss';
 
 const mapLayout = [
   [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
@@ -25,9 +27,15 @@ function App() {
 
   const buildingBlocks: Record<number, ReactNode> = {
     0: <Road />,
-    1: <Wall onOver={() => setIsHit(true)} />,
+    1: <Wall onOver={() => isStarted && setIsHit(true)} />,
     2: <Start onLeave={() => setIsStarted(true)} />,
     3: <End onOver={() => setisFinished(true)} />,
+  };
+
+  const resetGame = () => {
+    setIsHit(false);
+    setIsStarted(false);
+    setisFinished(false);
   };
 
   console.log('hit', isHit);
@@ -37,7 +45,8 @@ function App() {
   return (
     <Fragment>
       <div className="App">
-        {isHit && isStarted && <div className="overlay">GAME OVER</div>}
+        {isHit && isStarted && <GameOver onReset={resetGame} />}
+        {isStarted && isFinished && <GameFinished onReset={resetGame} />}
         {mapLayout.map((row) =>
           row.map((cell, index) => (
             <div key={index}>{buildingBlocks[cell]}</div>

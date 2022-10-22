@@ -9,13 +9,5 @@
   display: grid;
   grid-template-columns: repeat(11, 1fr);
   position: relative;
-  cursor: wait;
-}
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  background-color: black;
-  display: grid;
-  place-items: center;
+  cursor: cell;
 }
