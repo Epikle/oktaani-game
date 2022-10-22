@@ -48,6 +48,9 @@ function App() {
 
   return (
     <Fragment>
+      <h1>
+        oktaani<strong>GAME</strong>
+      </h1>
       <div className="App">
         {isHit && isStarted && <GameOver onReset={resetGame} />}
         {isStarted && isFinished && (

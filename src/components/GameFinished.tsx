@@ -13,7 +13,9 @@ const GameFinished: React.FC<Props> = ({ time, onReset }) => {
 
   return (
     <Overlay>
-      FINISHED: {endTime}s
+      <span className={styles.finished} data-time={endTime}>
+        FINISHED
+      </span>
       <button className={styles['new-game']} onClick={onReset}>
         Start new game
       </button>

@@ -1,10 +1,21 @@
 #root {
   display: grid;
+  gap: 1rem;
   place-items: center;
   min-height: 100vh;
+
+  h1 {
+    font-weight: 400;
+    align-self: flex-end;
+
+    strong {
+      color: gold;
+    }
+  }
 }
 
 .App {
+  align-self: flex-start;
   max-width: 50rem;
   display: grid;
   grid-template-columns: repeat(11, 1fr);

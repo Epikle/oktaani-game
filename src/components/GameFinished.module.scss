@@ -1,3 +1,18 @@
+.finished {
+  font-weight: bold;
+  position: relative;
+
+  &::after {
+    content: attr(data-time) 's';
+    position: absolute;
+    bottom: -1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.75rem;
+    color: gold;
+  }
+}
+
 .new-game {
   padding: 0.5rem 1rem;
   cursor: pointer;
