@@ -1,5 +1,7 @@
-const Wall: React.FC = () => {
-  return <div style={{ backgroundColor: 'gray', width: 30, height: 30 }}></div>;
+import styles from './Road.module.scss';
+
+const Road: React.FC = () => {
+  return <div className={styles.road}></div>;
 };
 
-export default Wall;
+export default Road;

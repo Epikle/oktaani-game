@@ -1,6 +1,10 @@
+@import '../index.scss';
+
 .finished {
   font-weight: bold;
   position: relative;
+  width: 100%;
+  text-align: center;
 
   &::after {
     content: attr(data-time) 's';
@@ -14,6 +18,5 @@
 }
 
 .new-game {
-  padding: 0.5rem 1rem;
-  cursor: pointer;
+  @include btn;
 }

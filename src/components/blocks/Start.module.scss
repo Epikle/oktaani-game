@@ -1,0 +1,9 @@
+@import './blocks.scss';
+
+.start {
+  @include block;
+  @include block-text;
+
+  background-color: lighten($color: #000000, $amount: 15);
+  color: whitesmoke;
+}

@@ -1,0 +1,12 @@
+@mixin block {
+  width: 30px;
+  height: 30px;
+}
+
+@mixin block-text {
+  font-size: 0.55rem;
+  font-weight: bold;
+  display: grid;
+  place-items: center;
+  user-select: none;
+}

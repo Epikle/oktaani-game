@@ -21,3 +21,15 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+@mixin btn {
+  background-color: gold;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+
+  &:hover {
+    background-color: goldenrod;
+  }
+}

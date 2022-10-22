@@ -1,0 +1,9 @@
+@import './blocks.scss';
+
+.end {
+  @include block;
+  @include block-text;
+
+  background-color: gold;
+  color: black;
+}

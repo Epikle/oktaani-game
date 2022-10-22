@@ -1,7 +1,6 @@
 import Overlay from './util/Overlay';
 
 import styles from './GameFinished.module.scss';
-import { Fragment } from 'react';
 
 type Props = {
   time: number;
@@ -9,7 +8,7 @@ type Props = {
 };
 
 const GameFinished: React.FC<Props> = ({ time, onReset }) => {
-  const endTime = ((Date.now() - time) / 1000).toFixed(2);
+  const endTime = +((Date.now() - time) / 1000).toFixed(2);
 
   return (
     <Overlay>

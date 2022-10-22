@@ -1,4 +1,12 @@
+@import '../index.scss';
+
+.game-over {
+  font-weight: bold;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
 .new-game {
-  padding: 0.5rem 1rem;
-  cursor: pointer;
+  @include btn;
 }

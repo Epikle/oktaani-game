@@ -9,7 +9,7 @@ type Props = {
 const GameOver: React.FC<Props> = ({ onReset }) => {
   return (
     <Overlay>
-      GAME OVER
+      <span className={styles['game-over']}>GAME OVER</span>
       <button className={styles['new-game']} onClick={onReset}>
         Start new game
       </button>

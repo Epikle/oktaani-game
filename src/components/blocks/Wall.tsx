@@ -1,14 +1,11 @@
+import styles from './Wall.module.scss';
+
 type Props = {
   onOver: () => void;
 };
 
 const Wall: React.FC<Props> = ({ onOver }) => {
-  return (
-    <div
-      style={{ backgroundColor: 'black', width: 30, height: 30 }}
-      onMouseOver={onOver}
-    ></div>
-  );
+  return <div className={styles.wall} onMouseOver={onOver}></div>;
 };
 
 export default Wall;

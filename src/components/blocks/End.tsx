@@ -1,21 +1,12 @@
+import styles from './End.module.scss';
+
 type Props = {
   onEnd: () => void;
 };
-const End: React.FC<Props> = ({ onEnd }) => {
-  const styles: React.CSSProperties = {
-    backgroundColor: 'gold',
-    width: 30,
-    height: 30,
-    fontSize: '0.55rem',
-    fontWeight: 'bold',
-    display: 'grid',
-    placeItems: 'center',
-    userSelect: 'none',
-    color: 'black',
-  };
 
+const End: React.FC<Props> = ({ onEnd }) => {
   return (
-    <div style={styles} onMouseOver={onEnd}>
+    <div className={styles.end} onMouseOver={onEnd}>
       END
     </div>
   );

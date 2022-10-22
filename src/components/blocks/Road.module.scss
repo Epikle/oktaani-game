@@ -1,0 +1,7 @@
+@import './blocks.scss';
+
+.road {
+  @include block;
+
+  background-color: lighten($color: #000000, $amount: 20);
+}
