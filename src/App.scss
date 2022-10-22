@@ -32,7 +32,6 @@
   display: grid;
   grid-template-columns: repeat(11, 1fr);
   position: relative;
-  cursor: cell;
 
   &::after {
     content: 'map' attr(data-map);

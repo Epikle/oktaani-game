@@ -4,4 +4,5 @@
   @include block;
 
   background-color: lighten($color: #000000, $amount: 20);
+  cursor: cell;
 }
