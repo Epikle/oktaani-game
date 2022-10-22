@@ -6,31 +6,9 @@ import Start from './components/blocks/Start';
 import End from './components/blocks/End';
 import GameOver from './components/GameOver';
 import GameFinished from './components/GameFinished';
+import mapLayout from './maps';
 
 import './App.scss';
-
-const mapLayout = [
-  [
-    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    [1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1],
-    [1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1],
-    [1, 1, 1, 0, 1, 0, 0, 0, 1, 3, 1],
-    [1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1],
-    [1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1],
-    [1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1],
-    [1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-  ],
-  [
-    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    [1, 3, 1, 0, 0, 0, 0, 0, 0, 0, 1],
-    [1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1],
-    [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1],
-    [1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1],
-    [2, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1],
-    [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1],
-    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-  ],
-];
 
 function App() {
   const [isHit, setIsHit] = useState(false);
