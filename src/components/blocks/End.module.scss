@@ -1,4 +1,5 @@
 @import './blocks.scss';
+@import '../../index.scss';
 
 .end {
   @include block;
@@ -6,4 +7,13 @@
 
   background-color: gold;
   color: black;
+
+  @include fadein(250ms);
+}
+
+.hidden {
+  @include block;
+
+  color: transparent;
+  background-color: lighten($color: #000000, $amount: 20);
 }

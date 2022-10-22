@@ -8,13 +8,14 @@
     font-weight: 400;
     align-self: flex-end;
     position: relative;
+    user-select: none;
 
     strong {
       color: gold;
     }
 
     &::after {
-      content: 'ALPHA V0.15.1';
+      content: attr(data-version);
       position: absolute;
       top: -0.75rem;
       right: 0;

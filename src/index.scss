@@ -33,3 +33,16 @@
     background-color: goldenrod;
   }
 }
+
+@mixin fadein($time: 200ms) {
+  animation: $time ease forwards fadein;
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}

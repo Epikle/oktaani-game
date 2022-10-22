@@ -51,7 +51,12 @@ function App() {
         isStarted={isStarted}
       />
     ),
-    3: <End onEnd={() => isStarted && setisFinished(true)} />,
+    3: (
+      <End
+        onEnd={() => isStarted && setisFinished(true)}
+        isStarted={isStarted}
+      />
+    ),
   };
 
   const resetGame = () => {
@@ -69,7 +74,7 @@ function App() {
 
   return (
     <Fragment>
-      <h1>
+      <h1 data-version="ALPHA V0.15.1">
         oktaani<strong>GAME</strong>
       </h1>
       <div className="app" data-map={map}>
