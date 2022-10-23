@@ -1,13 +1,13 @@
 import Overlay from './util/Overlay';
 
-import styles from './GameFinished.module.scss';
+import styles from './LevelFinished.module.scss';
 
 type Props = {
   time: number;
   onNextMap: () => void;
 };
 
-const GameFinished: React.FC<Props> = ({ time, onNextMap }) => {
+const LevelFinished: React.FC<Props> = ({ time, onNextMap }) => {
   const endTime = ((Date.now() - time) / 1000).toFixed(2);
 
   return (
@@ -22,4 +22,4 @@ const GameFinished: React.FC<Props> = ({ time, onNextMap }) => {
   );
 };
 
-export default GameFinished;
+export default LevelFinished;

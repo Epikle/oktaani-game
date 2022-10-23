@@ -5,8 +5,9 @@ import Wall from './components/blocks/Wall';
 import Start from './components/blocks/Start';
 import End from './components/blocks/End';
 import Error from './components/blocks/Error';
+import Heart from './components/blocks/Heart';
 import GameOver from './components/GameOver';
-import GameFinished from './components/GameFinished';
+import LevelFinished from './components/LevelFinished';
 import ResetLevel from './components/ResetLevel';
 import Lives from './components/Lives';
 import mapLayout from './maps';
@@ -76,12 +77,23 @@ function App() {
     resetLevel();
   };
 
+  const addLivesHandler = () => {
+    setLives((prevS) => prevS + 1);
+  };
+
   const buildingBlocks: Record<number, ReactNode> = {
     0: <Road />,
     1: <Wall onOver={stopLevelHandler} />,
     2: <Start onStart={startLevelHandler} isStarted={isStarted} />,
     3: <End onEnd={finishLevelHandler} isStarted={isStarted} />,
     4: <Wall fake />,
+    5: (
+      <Heart
+        isStarted={isStarted}
+        onAddLives={addLivesHandler}
+        isGameOver={isGameOver}
+      />
+    ),
   };
 
   return (
@@ -98,7 +110,7 @@ function App() {
         {isStarted && isGameOver && <GameOver onReset={resetGame} />}
         {isStarted && isHit && <ResetLevel onReset={resetLevel} />}
         {isStarted && isFinished && (
-          <GameFinished onNextMap={setNextMap} time={time} />
+          <LevelFinished onNextMap={setNextMap} time={time} />
         )}
         {mapLayout[map].map((row) =>
           row.map((cell, index) => (

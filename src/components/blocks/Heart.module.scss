@@ -1,0 +1,30 @@
+@import './blocks.scss';
+
+.heart {
+  @include block;
+  @include block-text;
+
+  font-size: 1rem;
+  color: lighten($color: red, $amount: 20);
+  background-color: lighten($color: #000000, $amount: 20);
+  cursor: grabbing;
+  animation: fade-in 500ms forwards, pulse 600ms alternate-reverse infinite;
+}
+
+@keyframes pulse {
+  from {
+    font-size: 1rem;
+  }
+  to {
+    font-size: 1.3rem;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    color: transparent;
+  }
+  to {
+    color: lighten($color: red, $amount: 20);
+  }
+}
