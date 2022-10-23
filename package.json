@@ -1,7 +1,7 @@
 {
   "name": "oktaani-game",
   "private": true,
-  "version": "0.15.3",
+  "version": "0.15.5",
   "type": "module",
   "scripts": {
     "dev": "vite",

@@ -15,4 +15,6 @@
 
   color: transparent;
   background-color: lighten($color: #000000, $amount: 20);
+  user-select: none;
+  cursor: cell;
 }

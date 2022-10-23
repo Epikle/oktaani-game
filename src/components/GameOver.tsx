@@ -11,7 +11,7 @@ const GameOver: React.FC<Props> = ({ onReset }) => {
     <Overlay>
       <span className={styles['game-over']}>GAME OVER</span>
       <button className={styles['new-game']} onClick={onReset}>
-        Try again
+        New game
       </button>
     </Overlay>
   );

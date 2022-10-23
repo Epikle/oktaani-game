@@ -4,10 +4,10 @@ import styles from './GameFinished.module.scss';
 
 type Props = {
   time: number;
-  onReset: () => void;
+  onNextMap: () => void;
 };
 
-const GameFinished: React.FC<Props> = ({ time, onReset }) => {
+const GameFinished: React.FC<Props> = ({ time, onNextMap }) => {
   const endTime = ((Date.now() - time) / 1000).toFixed(2);
 
   return (
@@ -15,7 +15,7 @@ const GameFinished: React.FC<Props> = ({ time, onReset }) => {
       <span className={styles.finished} data-time={endTime}>
         FINISHED
       </span>
-      <button className={styles['new-game']} onClick={onReset}>
+      <button className={styles['new-game']} onClick={onNextMap}>
         Continue
       </button>
     </Overlay>

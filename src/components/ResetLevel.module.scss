@@ -1,0 +1,13 @@
+@import '../index.scss';
+
+.reset-level {
+  font-weight: bold;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  user-select: none;
+}
+
+.new-game {
+  @include btn;
+}

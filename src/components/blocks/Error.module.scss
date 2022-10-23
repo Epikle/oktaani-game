@@ -1,0 +1,9 @@
+@import './blocks.scss';
+
+.error {
+  @include block;
+  @include block-text;
+
+  background-color: red;
+  cursor: not-allowed;
+}
