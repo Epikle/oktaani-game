@@ -94,11 +94,36 @@ function App() {
         isGameOver={isGameOver}
       />
     ),
+    6: (
+      <Wall
+        onOver={stopLevelHandler}
+        moving={{ direction: 'y', distance: 1, time: '1000ms', delay: '0ms' }}
+      />
+    ),
+    7: (
+      <Wall
+        onOver={stopLevelHandler}
+        moving={{ direction: 'y', distance: -1, time: '1000ms', delay: '0ms' }}
+      />
+    ),
+    8: (
+      <Wall
+        onOver={stopLevelHandler}
+        moving={{ direction: 'x', distance: 2, time: '2000ms', delay: '0ms' }}
+      />
+    ),
+    9: (
+      <Wall
+        onOver={stopLevelHandler}
+        moving={{ direction: 'x', distance: -1, time: '1000ms', delay: '0ms' }}
+      />
+    ),
+    10: <Road hide />,
   };
 
   return (
     <Fragment>
-      <h1 data-version="ALPHA V0.15.5">
+      <h1 data-version="ALPHA V0.15.6">
         oktaani<strong>GAME</strong>
       </h1>
       <div

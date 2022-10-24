@@ -5,4 +5,9 @@
 
   background-color: lighten($color: #000000, $amount: 20);
   cursor: cell;
+
+  &.hide {
+    background-color: lighten($color: #000000, $amount: 5);
+    cursor: none;
+  }
 }

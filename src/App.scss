@@ -32,6 +32,8 @@
   display: grid;
   grid-template-columns: repeat(11, 1fr);
   position: relative;
+  background-color: lighten($color: #000000, $amount: 20);
+  cursor: cell;
 
   &::after {
     content: 'map' attr(data-map);

@@ -4,4 +4,31 @@
   @include block;
 
   background-color: lighten($color: #000000, $amount: 8);
+  cursor: not-allowed;
+
+  &.moving-y {
+    animation: movingY var(--time) linear alternate infinite var(--delay);
+  }
+
+  &.moving-x {
+    animation: movingX var(--time) linear alternate infinite var(--delay);
+  }
+}
+
+@keyframes movingY {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(calc(var(--distance) * 30px));
+  }
+}
+
+@keyframes movingX {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(calc(var(--distance) * 30px));
+  }
 }
