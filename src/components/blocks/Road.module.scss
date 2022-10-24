@@ -9,5 +9,17 @@
   &.hide {
     background-color: lighten($color: #000000, $amount: 5);
     cursor: none;
+    position: relative;
+
+    &::before {
+      content: 'hidden';
+      display: grid;
+      place-content: center;
+      position: absolute;
+      inset: 0;
+      font-size: 0.5rem;
+      line-height: 0.5rem;
+      color: lighten($color: #000000, $amount: 20);
+    }
   }
 }
